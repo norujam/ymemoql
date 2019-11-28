@@ -1,0 +1,16 @@
+type Memo {
+  id: Int!
+  title: String!
+  description: String!
+}
+
+type Query {
+  memos: [Memo]!
+  memo(id: Int!): Memo
+}
+
+type Mutation {
+  addMemo(title: String!, description: String!): Memo
+  updateMemo(id: Int!, title: String!, description: String!): Boolean!
+  deleteMemo(id: Int!): Boolean!
+}
